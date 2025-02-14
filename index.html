@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Sentence Generator</title>
+</head>
+<body>
+    <h2>Simple Sentence Generator</h2>
+    <input type="button" id="generateBtn" value="Generate Sentence">
+    <p id="output"></p>
+
+    <script>
+        // Create an array with at least four words
+        const words = ["I", "like", "to", "code"];
+
+        // Function to generate the sentence
+        function generateSentence() {
+            let sentence = ""; // Initialize empty string
+
+            // Loop through the array and concatenate words with spaces
+            for (let i = 0; i < words.length; i++) {
+                sentence += words[i] + " ";
+            }
+
+            // Remove trailing space and set output text
+            document.getElementById("output").innerHTML = sentence.trim();
+        }
+
+        // Add event listener to button
+        document.getElementById("generateBtn").addEventListener("click", generateSentence);
+    </script>
+</body>
+</html>
